@@ -1,0 +1,13 @@
+@mixin flexbox($dir, $gap, $align: null, $justify: null) {
+    display: flex;
+    flex-direction: $dir;
+    gap: $gap;
+
+    @if $align != null {
+        align-items: $align;
+    }
+
+    @if $justify != null {
+        justify-content: $justify;
+    }
+}

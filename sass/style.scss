@@ -1,0 +1,133 @@
+@use "variables" as *;
+
+@use "mixins" as *;
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}
+
+body{
+    font-family: revert;
+}
+
+header{
+    //Estilizar el título de cada página
+    h1{
+        text-align: center;
+        margin: $mar-est;
+    }
+    nav{
+        //Estilizar la barra de navegación
+        ul{
+            //display: flex;
+            //flex-direction: column;
+            //gap: $gap-est;
+            //justify-content: center;
+            //align-items: center;
+
+            @include flexbox(column, $gap-est, center, center);
+
+            list-style: none;
+        }
+    }
+}
+
+main{
+    margin: $mar-est;
+}
+
+//Estilizar el mensaje de bienvenida
+.mensaje-bienvenida {
+    text-align: center;
+    font-size: large;
+    margin-bottom: $mar-est;
+}
+
+// Se define la tabla como una columna con las filas que sean necesarias
+.categorias {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: $gap-est;
+    h2{
+        margin: $mar-half 0;
+    }
+    //Para que las imágenes no superen a sus contenedores
+    img{
+        display: block;
+        width: 100%;
+    }
+}
+
+//Colocar cada página con la imagen arriba y la descripción abajo
+
+.pagina-arma {
+    //display: flex;
+    //flex-direction: column;
+    //gap: $gap-double;
+    //align-items: flex-start;
+
+    @include flexbox(column, $gap-double, flex-start, null);
+
+    h2{
+        margin-bottom: $mar-half;
+    }
+    h3{
+        margin: $mar-half 0;
+    }
+}
+
+.arma-imagen{
+    width: 100%;
+}
+
+footer{
+    p{
+        //display: flex;
+        //flex-direction: column;
+        //gap: $gap-est;
+        //justify-content: center;
+        //align-items: center;
+
+        @include flexbox(column, $gap-est, center, center);
+    }
+    margin: $mar-est;
+}
+
+@media (min-width: $tablet) {
+
+    header nav ul{
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    //Una tabla de dos columnas
+    .categorias{
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .pagina-arma{
+        flex-direction: row;
+    }
+
+    .arma-imagen {
+        width: 300px;
+    }
+
+    footer p{
+        flex-direction: row;
+    }
+}
+
+@media (min-width: $desktop) {
+    //Una tabla de cuatro columnas
+    .categorias{
+        grid-template-columns: repeat(4, 1fr);
+    }
+}

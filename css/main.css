@@ -1,0 +1,104 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+body {
+  font-family: revert;
+}
+
+header h1 {
+  text-align: center;
+  margin: 20px;
+}
+header nav ul {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+  justify-content: center;
+  list-style: none;
+}
+
+main {
+  margin: 20px;
+}
+
+.mensaje-bienvenida {
+  text-align: center;
+  font-size: large;
+  margin-bottom: 20px;
+}
+
+.categorias {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+}
+.categorias h2 {
+  margin: 10px 0;
+}
+.categorias img {
+  display: block;
+  width: 100%;
+}
+
+.pagina-arma {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  align-items: flex-start;
+}
+.pagina-arma h2 {
+  margin-bottom: 10px;
+}
+.pagina-arma h3 {
+  margin: 10px 0;
+}
+
+.arma-imagen {
+  width: 100%;
+}
+
+footer p {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+  justify-content: center;
+}
+footer {
+  margin: 20px;
+}
+
+@media (min-width: 768px) {
+  header nav ul {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  .categorias {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .pagina-arma {
+    flex-direction: row;
+  }
+  .arma-imagen {
+    width: 300px;
+  }
+  footer p {
+    flex-direction: row;
+  }
+}
+@media (min-width: 1024px) {
+  .categorias {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+/*# sourceMappingURL=main.css.map */
