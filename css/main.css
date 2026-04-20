@@ -30,9 +30,14 @@ main {
   margin: 20px;
 }
 
-.mensaje-bienvenida {
+.bienvenida h2 {
+  text-align: center;
+}
+.bienvenida p {
   text-align: center;
   font-size: large;
+}
+.bienvenida {
   margin-bottom: 20px;
 }
 

@@ -26,14 +26,7 @@ header{
     nav{
         //Estilizar la barra de navegación
         ul{
-            //display: flex;
-            //flex-direction: column;
-            //gap: $gap-est;
-            //justify-content: center;
-            //align-items: center;
-
             @include flexbox(column, $gap-est, center, center);
-
             list-style: none;
         }
     }
@@ -44,9 +37,14 @@ main{
 }
 
 //Estilizar el mensaje de bienvenida
-.mensaje-bienvenida {
-    text-align: center;
-    font-size: large;
+.bienvenida {
+    h2{
+        text-align: center;
+    }
+    p{
+        text-align: center;
+        font-size: large;
+    }
     margin-bottom: $mar-est;
 }
 
@@ -68,11 +66,6 @@ main{
 //Colocar cada página con la imagen arriba y la descripción abajo
 
 .pagina-arma {
-    //display: flex;
-    //flex-direction: column;
-    //gap: $gap-double;
-    //align-items: flex-start;
-
     @include flexbox(column, $gap-double, flex-start, null);
 
     h2{
@@ -89,12 +82,6 @@ main{
 
 footer{
     p{
-        //display: flex;
-        //flex-direction: column;
-        //gap: $gap-est;
-        //justify-content: center;
-        //align-items: center;
-
         @include flexbox(column, $gap-est, center, center);
     }
     margin: $mar-est;
